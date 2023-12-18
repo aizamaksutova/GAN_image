@@ -1,0 +1,62 @@
+{
+    "model": {
+        "type": "ConditionalVAE",
+        "args": {
+            "hidden_dims": [64, 64, 128, 256, 512, 1024, 1024],
+            "n_channels": 3,
+            "num_classes": 10,
+            "latent_dim": 128,
+            "img_size": 256,
+            "kld_coef": 0.000025,
+            "fmp_coef": 0.025
+        }
+    },
+    "data": { 
+        "train": {
+            "type": "ArtBench10_256x256",
+            "dataset_args": {
+                "root": "artbench-10-imagefolder-split",
+                "train": true
+            },
+            "dataloader_args": {
+                "batch_size": 64,
+                "num_workers": 1,
+                "shuffle": true
+            }
+        },
+        "test": {
+            "type": "ArtBench10_256x256",
+            "dataset_args": {
+                "root": "artbench-10-imagefolder-split",
+                "train": false,
+                "limit": 32
+            },
+            "dataloader_args": {
+                "batch_size": 32,
+                "num_workers": 1,
+                "shuffle": false
+            }
+        }
+    },
+    "optimizer": {
+        "lr": 5e-4,
+        "weight_decay": 0
+    },
+    "lr_scheduler": {
+        "sqrt_linear_warmup": {
+            "warmup_iters": 10000
+        },
+        "exponential": {
+            "gamma": 0.99995
+        }
+    },
+    "trainer": {
+        "epochs": 100,
+        "iterations_per_epoch": 1000,
+        "save_period": 5,
+        "log_every_step": 100
+    },
+    "wandb": {
+        "project": "art-generation"
+    }
+}

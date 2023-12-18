@@ -39,5 +39,5 @@ python3 train.py -c configs/cvae_train.json
 
 ## Wandb report
 
-Here is the [link](https://wandb.ai/aamaksutova/RawNet2/reports/RawNet2--Vmlldzo2Mjg0Njg4?accessToken=qylmiorkilpmmqqrbq1kbqx3gd6ewpx88d6870pr63myxzxdfhokrocak47fnljp) to my wandb report with all the architecture explanation and wavs with their scores on being spoofed or bona-fide
+Here is the [link](https://wandb.ai/aamaksutova/VAE1/reports/Generative-models-for-images--Vmlldzo2Mjk0MjU2?accessToken=f87jl61hihb2s6bt66evq5xipe5e0auk1narun9xt61703a09vkxzparlj647nga) to my wandb report with all the architecture explanation and generated samples
 

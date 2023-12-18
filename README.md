@@ -35,7 +35,8 @@ chmod a+x draw_art.sh
 ./draw_art.sh
 python3 train.py -c configs/cvae_train.json
 ```
-
+## Samples 
+You can access the samples for cats here [link](https://drive.google.com/file/d/1t8FWg7C_noHrAIVfH75UoHJCKzkllXQf/view?usp=sharing) or (this choice is better!) in my wandb report
 
 ## Wandb report
 

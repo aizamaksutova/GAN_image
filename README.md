@@ -14,6 +14,13 @@ pip install -r requirements.txt
 
 To inference a gif from one of my selected runs you should run my inference.ipynb notebook where you will be able to generate a gif manually (it might take very long though, so think twice)
 
+## How to get the model weights?
+Simply run
+
+```
+python3 data.py
+```
+This will download the model checkpoint for DCGAN
 
 ## How to train the model by yourself?
 In order to train the model you would need to perform simple steps, but wait for a long time for them to actually download all the data which is a ASV Dataset for antispoofing model training
